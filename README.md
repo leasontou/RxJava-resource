@@ -1,6 +1,8 @@
 # RxJava-resource
 
-创建操作
+**RxJava操作符**
+
+##### 创建操作
 
 用于创建Observable的操作符
 
@@ -15,7 +17,7 @@
 - Start — 创建发射一个函数的返回值的Observable
 - Timer — 创建在一个指定的延迟之后发射单个数据的Observable
 
-变换操作
+##### 变换操作
 
 这些操作符可用于对Observable发射的数据进行变换，详细解释可以看每个操作符的文档
 
@@ -26,7 +28,7 @@
 - Scan — 扫描，对Observable发射的每一项数据应用一个函数，然后按顺序依次发射这些值
 - Window — 窗口，定期将来自Observable的数据分拆成一些Observable窗口，然后发射这些窗口，而不是每次发射一项。类似于Buffer，但Buffer发射的是数据，Window发射的是Observable，每一个Observable发射原始Observable的数据的一个子集
 
-过滤操作
+##### 过滤操作
 
 这些操作符用于从Observable发射的数据中进行选择
 
@@ -43,7 +45,7 @@
 - Take — 只保留前面的若干项数据
 - TakeLast — 只保留后面的若干项数据
 
-组合操作
+##### 组合操作
 
 组合操作符用于将多个Observable组合成一个单一的Observable
 
@@ -55,14 +57,14 @@
 - Switch — 将一个发射Observable序列的Observable转换为这样一个Observable：它逐个发射那些Observable最近发射的数据
 - Zip — 打包，使用一个指定的函数将多个Observable发射的数据组合在一起，然后将这个函数的结果作为单项数据发射
 
-错误处理
+##### 错误处理
 
 这些操作符用于从错误通知中恢复
 
 - Catch — 捕获，继续序列操作，将错误替换为正常的数据，从onError通知中恢复
 - Retry — 重试，如果Observable发射了一个错误通知，重新订阅它，期待它正常终止
 
-辅助操作
+##### 辅助操作
 
 一组用于处理Observable的操作符
 
@@ -78,7 +80,7 @@
 - Timestamp — 给Observable发射的每个数据项添加一个时间戳
 - Using — 创建一个只在Observable的生命周期内存在的一次性资源
 
-条件和布尔操作
+##### 条件和布尔操作
 
 这些操作符可用于单个或多个数据项，也可用于Observable
 
@@ -92,7 +94,7 @@
 - TakeUntil — 发射来自原始Observable的数据，直到第二个Observable发射了一个数据或一个通知
 - TakeWhile — 发射原始Observable的数据，直到一个特定的条件为真，然后跳过剩余的数据
 
-算术和聚合操作
+##### 算术和聚合操作
 
 这些操作符可用于整个数据序列
 
@@ -104,7 +106,7 @@
 - Reduce — 按顺序对数据序列的每一个应用某个函数，然后返回这个值
 - Sum — 计算并发射数据序列的和
 
-连接操作
+##### 连接操作
 
 一些有精确可控的订阅行为的特殊Observable
 
@@ -113,7 +115,7 @@
 - RefCount — 使一个可连接的Observable表现得像一个普通的Observable
 - Replay — 确保所有的观察者收到同样的数据序列，即使他们在Observable开始发射数据之后才订阅
 
-转换操作
+##### 转换操作
 
 - To — 将Observable转换为其它的对象或数据结构
 - Blocking 阻塞Observable的操作符
@@ -128,4 +130,6 @@
 - 从Observable发射的数据中取特定的值（过滤操作）
 - 转发Observable的部分值（条件/布尔/过滤操作）
 - 对Observable发射的数据序列求值（算术/聚合操作）
+
+
 
